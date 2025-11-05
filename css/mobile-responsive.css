@@ -1,0 +1,569 @@
+/* ============================================
+   HOUSE MUGDAY - MOBILE RESPONSIVE ENHANCEMENTS
+   Touch-friendly and mobile-optimized styles
+   ============================================ */
+
+/* ===== MOBILE FIRST APPROACH ===== */
+
+/* Extra Small Devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  
+  /* Typography */
+  h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.3;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  /* Navigation */
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  
+  .navbar-brand small {
+    font-size: 0.7rem;
+  }
+  
+  .navbar-nav {
+    text-align: center;
+    padding: 15px 0;
+  }
+  
+  .nav-item {
+    margin: 5px 0;
+  }
+  
+  .dropdown-menu {
+    text-align: center;
+    border: none;
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  /* Hero Slider */
+  .slider-text {
+    padding: 20px;
+  }
+  
+  .slider-text h1 {
+    margin-bottom: 15px !important;
+  }
+  
+  .slider-text p {
+    margin-bottom: 20px !important;
+  }
+  
+  .slider-text .btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0 !important;
+    padding: 12px 20px !important;
+  }
+  
+  /* Info Section */
+  .ftco-intro .info .col-md-4 {
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+  
+  .ftco-intro .icon {
+    font-size: 2rem;
+  }
+  
+  .ftco-intro .book {
+    padding: 20px !important;
+  }
+  
+  .ftco-intro .book h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Forms */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .appointment-form .form-group {
+    margin-left: 0 !important;
+  }
+  
+  .appointment-form input,
+  .appointment-form textarea {
+    font-size: 1rem;
+    padding: 12px;
+  }
+  
+  .appointment-form .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* Services */
+  .services {
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  
+  .services .icon {
+    margin-bottom: 15px !important;
+  }
+  
+  .services .flaticon-choices,
+  .services .flaticon-delivery-truck,
+  .services .flaticon-coffee-bean {
+    font-size: 2.5em !important;
+  }
+  
+  /* Menu Section */
+  .menu-entry,
+  .menu-wrap {
+    margin-bottom: 25px;
+  }
+  
+  .menu-entry .text,
+  .menu-wrap .text {
+    padding: 15px;
+  }
+  
+  .menu-entry .img,
+  .menu-wrap .menu-img {
+    height: 250px;
+  }
+  
+  /* Counters */
+  .counter-wrap {
+    margin-bottom: 20px;
+  }
+  
+  .block-18 {
+    padding: 15px !important;
+  }
+  
+  .number {
+    font-size: 2rem !important;
+  }
+  
+  /* Products/Menu Tabs */
+  .nav-pills {
+    flex-direction: column;
+  }
+  
+  .nav-pills .nav-link {
+    width: 100%;
+    margin: 5px 0;
+  }
+  
+  /* Gallery */
+  .gallery {
+    height: 250px;
+    margin-bottom: 10px;
+  }
+  
+  /* Testimonials */
+  .testimony {
+    margin-bottom: 20px;
+    padding: 20px !important;
+  }
+  
+  /* Blog */
+  .blog-entry {
+    margin-bottom: 25px;
+  }
+  
+  .blog-entry .block-20 {
+    height: 250px;
+  }
+  
+  /* Footer */
+  .ftco-footer .col-lg-3,
+  .ftco-footer .col-lg-4,
+  .ftco-footer .col-lg-2,
+  .ftco-footer .col-md-6 {
+    margin-bottom: 30px;
+  }
+  
+  .ftco-footer-widget h2 {
+    font-size: 1.2rem;
+  }
+  
+  .block-21 {
+    margin-bottom: 20px;
+  }
+  
+  /* Touch-friendly sizes */
+  .btn,
+  .nav-link,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Hide parallax on mobile for performance */
+  [data-stellar-background-ratio] {
+    background-attachment: scroll !important;
+  }
+}
+
+/* Small Devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.75rem !important;
+  }
+  
+  .slider-text .btn {
+    display: inline-block;
+    margin: 5px !important;
+  }
+  
+  .menu-entry .img,
+  .menu-wrap .menu-img {
+    height: 300px;
+  }
+  
+  .gallery {
+    height: 300px;
+  }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+  
+  .nav-item {
+    margin: 0 5px;
+  }
+  
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  h2 {
+    font-size: 2rem !important;
+  }
+  
+  .ftco-intro .book {
+    padding: 25px !important;
+  }
+  
+  .services {
+    padding: 25px;
+  }
+  
+  .menu-entry .img,
+  .menu-wrap .menu-img {
+    height: 350px;
+  }
+  
+  .gallery {
+    height: 350px;
+  }
+  
+  /* Tablet-optimized grid */
+  .col-md-4 .menu-entry {
+    margin-bottom: 30px;
+  }
+}
+
+/* Large Devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  
+  .container {
+    max-width: 960px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+  
+  .nav-item {
+    margin: 0 8px;
+  }
+}
+
+/* ===== TOUCH-FRIENDLY ENHANCEMENTS ===== */
+@media (hover: none) and (pointer: coarse) {
+  
+  /* Remove hover effects on touch devices */
+  .menu-entry:hover,
+  .menu-wrap:hover,
+  .blog-entry:hover,
+  .services:hover,
+  .block-18:hover {
+    transform: none;
+  }
+  
+  /* Make touch targets larger */
+  .btn,
+  .nav-link,
+  a {
+    padding: 12px 20px;
+  }
+  
+  /* Remove transform on hover for images */
+  .menu-entry:hover .img,
+  .menu-wrap:hover .menu-img,
+  .blog-entry:hover .block-20 {
+    transform: none;
+  }
+  
+  /* Simplify animations */
+  .ftco-animate {
+    animation: none !important;
+  }
+}
+
+/* ===== LANDSCAPE ORIENTATION ===== */
+@media (orientation: landscape) and (max-height: 500px) {
+  
+  .slider-item {
+    height: 100vh;
+  }
+  
+  .slider-text {
+    padding: 10px;
+  }
+  
+  .slider-text h1 {
+    font-size: 1.5rem !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .slider-text p {
+    font-size: 0.9rem;
+    margin-bottom: 15px !important;
+  }
+  
+  .slider-text .btn {
+    padding: 8px 15px !important;
+  }
+}
+
+/* ===== PRINT OPTIMIZATION ===== */
+@media print {
+  
+  /* Hide unnecessary elements */
+  .navbar,
+  .scroll-to-top,
+  .ftco-footer-social,
+  .btn,
+  .owl-nav,
+  .owl-dots,
+  #ftco-loader {
+    display: none !important;
+  }
+  
+  /* Optimize colors for print */
+  body {
+    color: #000;
+    background: #fff;
+  }
+  
+  /* Show URLs for links */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+  
+  /* Page breaks */
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+  
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+}
+
+/* ===== REDUCED MOTION ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .home-slider {
+    animation: none;
+  }
+  
+  .ftco-animate {
+    animation: none !important;
+  }
+}
+
+/* ===== HIGH CONTRAST MODE ===== */
+@media (prefers-contrast: high) {
+  
+  .btn {
+    border: 2px solid currentColor;
+  }
+  
+  .form-control {
+    border: 2px solid #000;
+  }
+  
+  .nav-link {
+    border-bottom: 1px solid transparent;
+  }
+  
+  .nav-link:hover,
+  .nav-link:focus {
+    border-bottom-color: currentColor;
+  }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+  
+  .appointment-form {
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+  }
+  
+  .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .testimony {
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+  }
+  
+  .services {
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+  }
+}
+
+/* ===== RETINA DISPLAY OPTIMIZATION ===== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  
+  /* Optimize images for retina displays */
+  .img,
+  .menu-img,
+  .block-20 {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* ===== SMART TV / LARGE SCREENS ===== */
+@media (min-width: 1920px) {
+  
+  .container {
+    max-width: 1600px;
+  }
+  
+  h1 {
+    font-size: 4rem !important;
+  }
+  
+  h2 {
+    font-size: 3rem !important;
+  }
+  
+  p {
+    font-size: 1.2rem;
+  }
+  
+  .btn {
+    font-size: 1.1rem;
+    padding: 15px 40px;
+  }
+}
+
+/* ===== UTILITY CLASSES FOR RESPONSIVE IMAGES ===== */
+.img-fluid-mobile {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 767.98px) {
+  .hide-mobile {
+    display: none !important;
+  }
+  
+  .show-mobile {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hide-desktop {
+    display: none !important;
+  }
+  
+  .show-desktop {
+    display: block !important;
+  }
+}
+
+/* ===== SAFE AREA FOR NOTCHED DEVICES ===== */
+@supports (padding: max(0px)) {
+  .navbar,
+  .ftco-intro,
+  footer {
+    padding-left: max(15px, env(safe-area-inset-left));
+    padding-right: max(15px, env(safe-area-inset-right));
+  }
+  
+  .scroll-to-top {
+    bottom: max(30px, env(safe-area-inset-bottom));
+    right: max(30px, env(safe-area-inset-right));
+  }
+}
+
+/* ===== PERFORMANCE OPTIMIZATIONS ===== */
+@media (max-width: 767.98px) {
+  
+  /* Reduce expensive properties on mobile */
+  .overlay,
+  .testimony.overlay {
+    backdrop-filter: none;
+  }
+  
+  /* Simplify shadows */
+  .menu-entry:hover,
+  .services:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Disable parallax on mobile */
+  [data-stellar-background-ratio] {
+    background-attachment: scroll !important;
+  }
+}

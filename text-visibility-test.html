@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Visibility Test - House Mugday</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .test-section h2 {
+            color: #333;
+            border-bottom: 2px solid #c49b63;
+            padding-bottom: 10px;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .check-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f8f9fa;
+            border-left: 4px solid #c49b63;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 House Mugday - Text Visibility Diagnostic</h1>
+    
+    <div class="test-section">
+        <h2>CSS Files Status</h2>
+        <div id="css-status"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Text Visibility Tests</h2>
+        <div class="check-item">
+            <strong>This text should be visible</strong>
+            <p>If you can read this, basic text rendering is working.</p>
+        </div>
+        <div class="check-item" style="background: #333; color: white; padding: 20px;">
+            <strong>White text on dark background</strong>
+            <p>This simulates the hero slider text.</p>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>Recommendations</h2>
+        <div class="check-item">
+            <h3>If text is not visible on the homepage:</h3>
+            <ol>
+                <li>Open browser DevTools (F12 or right-click → Inspect)</li>
+                <li>Go to Console tab and check for errors</li>
+                <li>Go to Network tab and verify all CSS files loaded (status 200)</li>
+                <li>Go to Elements tab, click on text element, check Computed styles</li>
+                <li>Try temporarily disabling enhancements.css to isolate the issue</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>Quick Fixes</h2>
+        <div class="check-item">
+            <h3>Option 1: Temporarily disable enhancements</h3>
+            <p>Comment out these lines in index.html:</p>
+            <pre style="background: #f4f4f4; padding: 10px; border-radius: 4px;">
+&lt;!-- &lt;link rel="stylesheet" href="css/enhancements.css"&gt; --&gt;
+&lt;!-- &lt;link rel="stylesheet" href="css/mobile-responsive.css"&gt; --&gt;</pre>
+        </div>
+        
+        <div class="check-item">
+            <h3>Option 2: Force text colors</h3>
+            <p>Add this to the top of enhancements.css:</p>
+            <pre style="background: #f4f4f4; padding: 10px; border-radius: 4px;">
+/* Force text visibility */
+body, body * {
+    color: inherit !important;
+}
+.slider-text, .slider-text * {
+    color: white !important;
+}</pre>
+        </div>
+    </div>
+
+    <script>
+        // Check if CSS files are loaded
+        function checkCSSFiles() {
+            const statusDiv = document.getElementById('css-status');
+            const cssFiles = [
+                'css/style.css',
+                'css/enhancements.css',
+                'css/mobile-responsive.css'
+            ];
+
+            let html = '<h3>Checking CSS files from main page...</h3>';
+            html += '<p><strong>Note:</strong> Open index.html to verify actual CSS loading</p>';
+            
+            cssFiles.forEach(file => {
+                html += `<div class="check-item">
+                    <strong>${file}</strong>
+                    <p>Check in browser DevTools → Network tab</p>
+                </div>`;
+            });
+
+            statusDiv.innerHTML = html;
+        }
+
+        checkCSSFiles();
+
+        // Log console message
+        console.log('%c🏠 House Mugday Text Visibility Test', 'font-size: 20px; color: #c49b63; font-weight: bold;');
+        console.log('%cIf you see this message, JavaScript is working correctly.', 'color: green;');
+        console.log('%cNext steps:', 'font-weight: bold;');
+        console.log('1. Check if all CSS files loaded in Network tab');
+        console.log('2. Inspect text elements to see their computed styles');
+        console.log('3. Look for color: properties that might be hiding text');
+    </script>
+</body>
+</html>
