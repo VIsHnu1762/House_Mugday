@@ -1,8 +1,13 @@
-# ☕ House Mugday — Marketing Strategy & Webpage
+# ☕ House Mugday — Marketing Strategy & Webpage  
+🔗 **Live Website:** [https://house-mugday.onrender.com](https://house-mugday.onrender.com)
+
+---
 
 ### 🧁 Project Overview
 **House Mugday** is a cozy café concept that blends comfort, creativity, and connection — where every mug tells a story.  
-This project focuses on developing a **digital marketing strategy** and an **interactive café webpage** to enhance brand visibility, customer engagement, and business reach.
+This project focuses on developing a **digital marketing strategy** and an **interactive café webpage** to enhance brand visibility, customer engagement, and business reach.  
+
+🌐 **Visit the Live Site:** [house-mugday.onrender.com](https://house-mugday.onrender.com)
 
 ---
 
@@ -79,9 +84,10 @@ This project focuses on developing a **digital marketing strategy** and an **int
 **House Mugday Café**  
 📍 Location: [Your Café Address]  
 📞 Contact: [Your Phone Number]  
-🌐 Website: [Your Website URL]  
+🌐 Website: [https://house-mugday.onrender.com](https://house-mugday.onrender.com)  
 ✉️ Email: [Your Email Address]
 
 ---
 
-> “Every sip has a story — discover yours at House Mugday.”
+> “Every sip has a story — discover yours at House Mugday.”  
+> ☕ **Live Now:** [https://house-mugday.onrender.com](https://house-mugday.onrender.com)
