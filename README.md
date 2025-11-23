@@ -78,13 +78,23 @@ House_Mugday/
 
 ## 🧠 Features
 
-- Hero slider with overlay and crisp, readable headings
-- “Discover” style section titles (gold cursive + bold heading)
-- Services, Menu, Gallery, Testimonials, Blog, and Footer sections
-- Booking form with client-side validation
-- Add‑to‑cart demo with localStorage counter
-- Lazy-loaded images and micro‑interactions
-- Keyboard-friendly lightbox and smooth scrolling
+This site ships a compact but practical feature set focused on accessibility, performance, and a polished visual identity. Key features and where to find them:
+
+- **Hero Slider & Overlay:** Accessible image slider with readable headings and strong contrast. See `index.html` (hero section) and styling in `css/style.css` + `css/enhancements.css`.
+- **"Discover" Headings:** Distinctive gold cursive accent for section titles and bold headings to match the requested visual language. Implemented in `css/text-visibility-fix.css` and `css/enhancements.css`.
+- **Responsive Layout & Mobile Improvements:** Mobile-first tweaks and touch targets are in `css/mobile-responsive.css`.
+- **Accessibility Improvements:** Focus outlines, keyboard navigation support for the lightbox, reduced motion support, and better contrast across sections — implemented in `css/enhancements.css` and `css/mobile-responsive.css`.
+- **Booking Form Validation:** Client-side validation and user-friendly error/success toasts; logic in `js/enhancements.js` (function: form validation + toast messages).
+- **Add-to-Cart Demo:** Simple cart counter persisted in `localStorage` for demo purposes, implemented in `js/enhancements.js` (cart counter and localStorage helpers).
+- **Loader Safety Net:** Robust loader-hide guard to prevent the page from getting stuck on a spinner; implemented in `js/loader-fix.js` and an inline emergency script in `index.html`.
+- **Text Visibility Safety:** A last-resort stylesheet `css/text-visibility-fix.css` forces contrast and z-index fixes for hero and content text when images or overlays would otherwise hide them.
+- **Lazy Loading & Performance:** Image lazy-loading via IntersectionObserver, simplified animations on mobile, and small interaction optimizations in `js/enhancements.js`.
+- **Micro-Interactions & UI Polish:** Smooth scroll-to-top, button hover effects, accessible tooltips, reveal animations (AOS tweaks) and reading progress indicator — primarily in `js/enhancements.js` + `css/enhancements.css`.
+- **Galleries & Lightbox:** Image galleries with keyboard navigation and Magnific Popup integration (see `js/main.js` and `js/enhancements.js`).
+- **SEO & Social Meta:** Pre-filled meta tags and Open Graph/Twitter Card entries in `index.html` for improved sharing and indexing.
+- **No Build Required:** Pure static site — open `index.html` or deploy to any static host (GitHub Pages, Netlify, Vercel).
+
+If you want to remove or roll back any enhancement temporarily, the troubleshooting section explains which files to comment out and how to revert safely.
 
 ---
 

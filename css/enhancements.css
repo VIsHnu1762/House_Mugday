@@ -69,7 +69,17 @@ body {
   display: inline-block !important;
 }
 
-h1, h2, h3, h4, h5, h6, p, span, a, li, div {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+li,
+div {
   color: inherit;
 }
 
@@ -159,9 +169,12 @@ h1, h2, h3, h4, h5, h6, p, span, a, li, div {
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }
@@ -566,6 +579,7 @@ h1, h2, h3, h4, h5, h6, p, span, a, li, div {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -576,6 +590,7 @@ h1, h2, h3, h4, h5, h6, p, span, a, li, div {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -684,6 +699,7 @@ h1, h2, h3, h4, h5, h6, p, span, a, li, div {
 
 /* ===== PRINT STYLES ===== */
 @media print {
+
   .navbar,
   .scroll-to-top,
   .ftco-footer-social,
@@ -714,6 +730,7 @@ h1, h2, h3, h4, h5, h6, p, span, a, li, div {
     opacity: 0;
     transform: translateX(-50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -725,6 +742,7 @@ h1, h2, h3, h4, h5, h6, p, span, a, li, div {
     opacity: 0;
     transform: translateX(50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);

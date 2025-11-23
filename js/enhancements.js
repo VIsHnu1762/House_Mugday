@@ -3,7 +3,7 @@
    Additional features and improvements
    ============================================ */
 
-(function($) {
+(function ($) {
     "use strict";
 
     // ===== SCROLL TO TOP BUTTON =====
@@ -13,7 +13,7 @@
         $('body').append(scrollBtn);
 
         // Show/hide based on scroll position
-        $(window).scroll(function() {
+        $(window).scroll(function () {
             if ($(this).scrollTop() > 300) {
                 scrollBtn.addClass('show');
             } else {
@@ -22,7 +22,7 @@
         });
 
         // Smooth scroll to top on click
-        scrollBtn.click(function() {
+        scrollBtn.click(function () {
             $('html, body').animate({ scrollTop: 0 }, 600, 'easeInOutExpo');
             return false;
         });
@@ -32,12 +32,12 @@
     function initFormValidation() {
         // Email validation regex
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        
+
         // Phone validation regex (Indian format)
         const phoneRegex = /^[6-9]\d{9}$/;
 
         // Validate appointment forms
-        $('.appointment-form').submit(function(e) {
+        $('.appointment-form').submit(function (e) {
             let isValid = true;
             let errorMessage = '';
 
@@ -167,9 +167,9 @@
         }
 
         // Auto remove after 5 seconds
-        setTimeout(function() {
+        setTimeout(function () {
             notification.css('animation', 'slideOutRight 0.5s ease');
-            setTimeout(function() {
+            setTimeout(function () {
                 notification.remove();
             }, 500);
         }, 5000);
@@ -180,20 +180,20 @@
         let cartCount = parseInt($('.bag small').text()) || 0;
 
         // Add to cart buttons
-        $(document).on('click', '.btn-outline-primary', function(e) {
+        $(document).on('click', '.btn-outline-primary', function (e) {
             const productName = $(this).closest('.text, .media-body').find('h3 a').text();
             const productPrice = $(this).closest('.text, .media-body').find('.price span').text();
 
             if (productName && productPrice) {
                 e.preventDefault();
-                
+
                 // Increment cart count
                 cartCount++;
                 $('.bag small').text(cartCount);
-                
+
                 // Animate cart icon
                 $('.bag').addClass('animate-bounce');
-                setTimeout(function() {
+                setTimeout(function () {
                     $('.bag').removeClass('animate-bounce');
                 }, 600);
 
@@ -244,8 +244,8 @@
     // ===== LAZY LOADING FOR IMAGES =====
     function initLazyLoading() {
         if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(function(entry) {
+            const imageObserver = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(function (entry) {
                     if (entry.isIntersecting) {
                         const img = entry.target;
                         if (img.dataset.src) {
@@ -258,7 +258,7 @@
             });
 
             // Observe all images with data-src attribute
-            document.querySelectorAll('img[data-src]').forEach(function(img) {
+            document.querySelectorAll('img[data-src]').forEach(function (img) {
                 imageObserver.observe(img);
             });
         }
@@ -267,8 +267,8 @@
     // ===== SMOOTH REVEAL ANIMATIONS =====
     function initRevealAnimations() {
         if ('IntersectionObserver' in window) {
-            const revealObserver = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
+            const revealObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('revealed');
                         revealObserver.unobserve(entry.target);
@@ -279,7 +279,7 @@
             });
 
             // Observe elements with animate-on-scroll class
-            document.querySelectorAll('.animate-on-scroll').forEach(function(elem) {
+            document.querySelectorAll('.animate-on-scroll').forEach(function (elem) {
                 revealObserver.observe(elem);
             });
         }
@@ -288,10 +288,10 @@
     // ===== SEARCH FUNCTIONALITY =====
     function initSearch() {
         // Add search functionality if search form exists
-        $('.search-form').submit(function(e) {
+        $('.search-form').submit(function (e) {
             e.preventDefault();
             const searchTerm = $(this).find('input').val().trim();
-            
+
             if (searchTerm) {
                 showNotification('success', `Searching for: ${searchTerm}`);
                 // Implement actual search logic here
@@ -306,7 +306,7 @@
         let lastScroll = 0;
         const navbar = $('.ftco_navbar');
 
-        $(window).scroll(function() {
+        $(window).scroll(function () {
             const currentScroll = $(this).scrollTop();
 
             if (currentScroll > lastScroll && currentScroll > 100) {
@@ -334,7 +334,7 @@
 
     // ===== PARALLAX EFFECT ENHANCEMENT =====
     function enhanceParallax() {
-        $(window).scroll(function() {
+        $(window).scroll(function () {
             const scrolled = $(this).scrollTop();
             $('.home-slider .slider-item').css('transform', 'translateY(' + (scrolled * 0.5) + 'px)');
         });
@@ -342,19 +342,19 @@
 
     // ===== COUNTER ANIMATION IMPROVEMENT =====
     function improveCounterAnimation() {
-        $('.number').each(function() {
+        $('.number').each(function () {
             const $this = $(this);
             const countTo = $this.data('number');
-            
+
             $({ countNum: 0 }).animate({
                 countNum: countTo
             }, {
                 duration: 3000,
                 easing: 'swing',
-                step: function() {
+                step: function () {
                     $this.text(Math.floor(this.countNum).toLocaleString());
                 },
-                complete: function() {
+                complete: function () {
                     $this.text(this.countNum.toLocaleString());
                 }
             });
@@ -364,7 +364,7 @@
     // ===== MODAL/LIGHTBOX ENHANCEMENT =====
     function initLightboxEnhancement() {
         // Keyboard navigation for gallery
-        $(document).keydown(function(e) {
+        $(document).keydown(function (e) {
             if ($('.mfp-ready').length > 0) {
                 if (e.keyCode === 37) { // Left arrow
                     $('.mfp-arrow-left').click();
@@ -378,14 +378,14 @@
     // ===== TOOLTIPS =====
     function initTooltips() {
         // Add tooltips to social icons
-        $('.ftco-footer-social a').each(function() {
+        $('.ftco-footer-social a').each(function () {
             const iconClass = $(this).find('span').attr('class');
             let platform = 'Social';
-            
+
             if (iconClass.includes('twitter')) platform = 'Twitter';
             else if (iconClass.includes('facebook')) platform = 'Facebook';
             else if (iconClass.includes('instagram')) platform = 'Instagram';
-            
+
             $(this).attr('title', `Follow us on ${platform}`);
             $(this).attr('aria-label', `Follow us on ${platform}`);
         });
@@ -397,12 +397,12 @@
             const progressBar = $('<div class="reading-progress"><div class="reading-progress-fill"></div></div>');
             $('body').prepend(progressBar);
 
-            $(window).scroll(function() {
+            $(window).scroll(function () {
                 const windowHeight = $(window).height();
                 const documentHeight = $(document).height();
                 const scrollTop = $(window).scrollTop();
                 const progress = (scrollTop / (documentHeight - windowHeight)) * 100;
-                
+
                 $('.reading-progress-fill').css('width', progress + '%');
             });
 
@@ -431,7 +431,7 @@
     }
 
     // ===== INITIALIZE ALL ENHANCEMENTS =====
-    $(document).ready(function() {
+    $(document).ready(function () {
         initScrollToTop();
         initFormValidation();
         initCartFunctionality();
@@ -448,7 +448,7 @@
     });
 
     // ===== PERFORMANCE MONITORING =====
-    $(window).on('load', function() {
+    $(window).on('load', function () {
         const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
         console.log(`⚡ Page loaded in ${loadTime}ms`);
     });
