@@ -63,6 +63,7 @@ House_Mugday/
 ├── js/
 │   ├── main.js               # Core interactions (carousel, AOS, counters)
 │   ├── enhancements.js       # UX extras: cart, validation, scroll-to-top
+│   ├── cart.js               # New cart experience (state, UI, toasts)
 │   ├── loader-fix.js         # Guarantees loader hides quickly
 │   └── ...
 ├── images/                   # Site images
@@ -86,6 +87,7 @@ This site ships a compact but practical feature set focused on accessibility, pe
 - **Accessibility Improvements:** Focus outlines, keyboard navigation support for the lightbox, reduced motion support, and better contrast across sections — implemented in `css/enhancements.css` and `css/mobile-responsive.css`.
 - **Booking Form Validation:** Client-side validation and user-friendly error/success toasts; logic in `js/enhancements.js` (function: form validation + toast messages).
 - **Add-to-Cart Demo:** Simple cart counter persisted in `localStorage` for demo purposes, implemented in `js/enhancements.js` (cart counter and localStorage helpers).
+- **Fully Functional Cart Page:** Dynamic cart interface with quantity controls, totals, delivery progress, and toasts powered by `js/cart.js` + `cart.html`.
 - **Loader Safety Net:** Robust loader-hide guard to prevent the page from getting stuck on a spinner; implemented in `js/loader-fix.js` and an inline emergency script in `index.html`.
 - **Text Visibility Safety:** A last-resort stylesheet `css/text-visibility-fix.css` forces contrast and z-index fixes for hero and content text when images or overlays would otherwise hide them.
 - **Lazy Loading & Performance:** Image lazy-loading via IntersectionObserver, simplified animations on mobile, and small interaction optimizations in `js/enhancements.js`.

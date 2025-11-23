@@ -29,6 +29,7 @@ This document outlines all the enhancements made to the House Mugday Café websi
 - **Footer social icons** with 360° rotation on hover
 - **Product tabs** with modern pill-style navigation
 - **Scroll-to-top button** with smooth appearance
+- **Cart experience layout** with glassmorphism panels, progress bar, card-based items, and toasts
 
 #### Visual Effects:
 - Smooth transitions on all interactive elements
@@ -80,6 +81,15 @@ This document outlines all the enhancements made to the House Mugday Café websi
    - Lightbox keyboard navigation
    - Tooltips for social icons
    - Reading progress bar for blog pages
+
+### 3b. 🛒 Immersive Cart Experience (`js/cart.js`)
+
+- **Stateful cart manager** with LocalStorage persistence, item deduping, and server-friendly data structure
+- **Dynamic rendering** of the cart page (empty state, animated item cards, sticky summary)
+- **Quantity controls** with +/- buttons, manual input, and graceful validation
+- **Smart totals** with automatic subtotal, dynamic discounts, delivery threshold progress, and checkout guard rails
+- **Toast notifications** to confirm actions (add, remove, clear) without intrusive modals
+- **Global hooks** that automatically upgrade any “Add to Cart” button text, so legacy markup works without editing each page
 
 ### 4. 📱 Mobile Responsive Design (`css/mobile-responsive.css`)
 

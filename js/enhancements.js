@@ -175,69 +175,15 @@
         }, 5000);
     }
 
-    // ===== ADD TO CART FUNCTIONALITY =====
-    function initCartFunctionality() {
-        let cartCount = parseInt($('.bag small').text()) || 0;
-
-        // Add to cart buttons
-        $(document).on('click', '.btn-outline-primary', function (e) {
-            const productName = $(this).closest('.text, .media-body').find('h3 a').text();
-            const productPrice = $(this).closest('.text, .media-body').find('.price span').text();
-
-            if (productName && productPrice) {
-                e.preventDefault();
-
-                // Increment cart count
-                cartCount++;
-                $('.bag small').text(cartCount);
-
-                // Animate cart icon
-                $('.bag').addClass('animate-bounce');
-                setTimeout(function () {
-                    $('.bag').removeClass('animate-bounce');
-                }, 600);
-
-                // Show notification
-                showNotification('success', `${productName} added to cart!`);
-
-                // Store in localStorage
-                let cart = JSON.parse(localStorage.getItem('houseMugdayCart')) || [];
-                cart.push({
-                    name: productName,
-                    price: productPrice,
-                    quantity: 1
-                });
-                localStorage.setItem('houseMugdayCart', JSON.stringify(cart));
-                localStorage.setItem('cartCount', cartCount);
+    // ===== CART BADGE SYNC =====
+    function syncCartBadgeFromStorage() {
+        try {
+            const savedCount = parseInt(localStorage.getItem('cartCount'), 10);
+            if (!Number.isNaN(savedCount)) {
+                $('.nav-item.cart .bag small').text(savedCount);
             }
-        });
-
-        // Load cart count from localStorage
-        const savedCount = localStorage.getItem('cartCount');
-        if (savedCount) {
-            $('.bag small').text(savedCount);
-        }
-
-        // Add bounce animation CSS
-        if ($('#cart-animation-styles').length === 0) {
-            $('head').append(`
-                <style id="cart-animation-styles">
-                    .animate-bounce {
-                        animation: bounce 0.6s ease;
-                    }
-                    @keyframes bounce {
-                        0%, 20%, 50%, 80%, 100% {
-                            transform: translateY(0);
-                        }
-                        40% {
-                            transform: translateY(-10px);
-                        }
-                        60% {
-                            transform: translateY(-5px);
-                        }
-                    }
-                </style>
-            `);
+        } catch (error) {
+            console.warn('Unable to access cart count from storage', error);
         }
     }
 
@@ -434,7 +380,6 @@
     $(document).ready(function () {
         initScrollToTop();
         initFormValidation();
-        initCartFunctionality();
         initLazyLoading();
         initRevealAnimations();
         initSearch();
@@ -443,6 +388,7 @@
         initLightboxEnhancement();
         initTooltips();
         initReadingProgress();
+        syncCartBadgeFromStorage();
 
         console.log('🏠☕ House Mugday enhancements loaded successfully!');
     });
